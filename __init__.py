@@ -8,7 +8,7 @@ Created on Tue Jan 22 16:14:07 2019
 #Parameter library
 import numpy as np
 from math import sqrt
-from random import randint
+from random import random
 #CONSTANTS
 
 #high end value of the coupling parameter
@@ -29,7 +29,7 @@ alpha = 0.125
 #frequency
 omega_c = sqrt(3 / 32)
 
-#INITIAL CONDITIONS
+#INITIAL CONDITIONS (non-dimensionalised)
 h_0 = 0
 T_0 = 1.125 / 7.5
 
@@ -61,7 +61,7 @@ def mew(t, mew_0 = 0.75, mew_ann = 0.2, eps = 0.1, tau = (12/2)):
     return mew
 
 def xi(t, dt, f_ann = 0.02, f_ran = 0.2, eps = 0.1, mew_0 = 0.75, mew_ann = 0.2, tau = (12/2), tau_cor = 1/(30*2)):
-    W = randint(-100,100) / 100
+    W = -1 + (random()*2)
     
     xi = f_ann * np.cos(2 * np.pi * t / tau) + f_ran * W * (tau_cor / dt)
     
