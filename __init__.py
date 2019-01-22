@@ -25,6 +25,10 @@ r = 0.25
 #relates enchanced easterly wind stress to the recharge of the ocean heat content
 alpha = 0.125
 
+#INITIAL CONDITIONS
+h_0 = 0
+T_0 = 1.125 / 7.5
+
 #PARAMETERS
 
 #coupling coefficient
