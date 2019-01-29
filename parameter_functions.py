@@ -7,8 +7,7 @@ Created on Tue Jan 29 12:05:00 2019
 import numpy as np
 from random import random
 
-def mew(t, b_0 = 2.5 mew_wac = 2/3, mew_0 = 0.75, mew_ann = 0.2, eps = 0.1, tau = (12/2),
-        ac = "yes"):
+def mew(t, ac, b_0 = 2.5, mew_wac = 2/3, mew_0 = 0.75, mew_ann = 0.2, eps = 0.1, tau = (12/2)):
     
     #with annual cycle
     if ac == "yes":
@@ -22,7 +21,7 @@ def mew(t, b_0 = 2.5 mew_wac = 2/3, mew_0 = 0.75, mew_ann = 0.2, eps = 0.1, tau 
     b = b_0 * mew
     return b
 
-def xi(t, dt, wsf = "yes", f_ann = 0.02, f_ran = 0.2, eps = 0.1, mew_0 = 0.75, 
+def xi(t, dt, wsf, f_ann = 0.02, f_ran = 0.2, eps = 0.1, mew_0 = 0.75, 
        mew_ann = 0.2, tau = (12/2), tau_cor = 1/(30*2)):
     
     #with wind stress forcing 

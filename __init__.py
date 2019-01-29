@@ -18,7 +18,7 @@ b_0 = 2.5
 gamma = 0.75
 
 #damping rate of SST anomalies
-c = 1
+c = float(1)
 
 #damping of upper heat content
 r = 0.25
@@ -31,8 +31,12 @@ omega_c = sqrt(3 / 32)
 #period (nondimensionalised)
 tau_c = 2 * np.pi / omega_c
 
+#time step - set it as one day (one month divided by 30)
+dt = 1/30
+
+
 #INITIAL CONDITIONS (non-dimensionalised)
-h_0 = 0
+h_0 = float(0)
 T_0 = 1.125 / 7.5
 
 
