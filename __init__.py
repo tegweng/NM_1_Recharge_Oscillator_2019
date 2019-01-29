@@ -28,24 +28,14 @@ alpha = 0.125
 
 #frequency
 omega_c = sqrt(3 / 32)
+#period (nondimensionalised)
+tau_c = 2 * np.pi / omega_c
 
 #INITIAL CONDITIONS (non-dimensionalised)
 h_0 = 0
 T_0 = 1.125 / 7.5
 
-#PARAMETERS
 
-#relates stronger thermocline gradient to stronger easterly wind stress
-b = b_0 * mew
-
-#describes Bjerknes positive feedback process
-R = (gamma * b) - c 
-
-#varies the degree of nonlinearity
-eps = 0
-
-#period (nondimensionalised)
-tau_c = 2 * np.pi / omega_c
 
 
 

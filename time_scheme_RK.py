@@ -13,10 +13,14 @@ def RK4(N_t, dt, xi, eps, b):
     q[:,0] = [T_0, h_0]
     
     for n in range(N_t + 1):
+        
         k1 = [dTdt(q[0,n],q[1,n], xi, eps, b), dhdt(q[0,n], q[1,n], xi, b)]
-        k2 = []
-        k3 = []
-        k4 = []
+        k2 = [dTdt(q[0,n] + k1[0]* dt / 2,q[1,n] + k1[1] * dt /2 , xi, eps, b), 
+              dhdt(q[0,n] + k1[0]* dt / 2, q[1,n] + k1[1] * dt /2 , xi, b)]
+        k3 = [dTdt(q[0,n] + k2[0]* dt / 2,q[1,n] + k2[1] * dt /2 , xi, eps, b), 
+              dhdt(q[0,n] + k2[0]* dt / 2, q[1,n] + k2[1] * dt /2 , xi, b)]
+        k4 = [dTdt(q[0,n] + k3[0]* dt / 2,q[1,n] + k3[1] * dt /2 , xi, eps, b), 
+              dhdt(q[0,n] + k3[0]* dt / 2, q[1,n] + k3[1] * dt /2 , xi, b)]
         
         q[:,n+1] = q[:, n] + dt * 1/6 * (k1 + 2 * (k2 + k3) + k4)
         
