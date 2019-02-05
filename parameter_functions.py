@@ -7,7 +7,7 @@ Created on Tue Jan 29 12:05:00 2019
 import numpy as np
 from random import random
 
-def mew(t, ac, b_0 = 2.5, mew_wac = 2/3, mew_0 = 0.75, mew_ann = 0.2, eps = 0.1, tau = (12/2)):
+def mew(t, ac, mew_wac, b_0 = 2.5, mew_0 = 0.75, mew_ann = 0.2, eps = 0.1, tau = (12/2)):
     
     #with annual cycle
     if ac == "yes":
