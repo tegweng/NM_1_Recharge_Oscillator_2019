@@ -31,13 +31,8 @@ omega_c = sqrt(3 / 32)
 #period (nondimensionalised)
 tau_c = 2 * np.pi / omega_c
 
-#time step - set it as one day (one month divided by 30)
-dt = 1/30
 
 
-#INITIAL CONDITIONS (non-dimensionalised)
-h_0 = float(0)
-T_0 = 1.125 / 7.5
 
 
 
